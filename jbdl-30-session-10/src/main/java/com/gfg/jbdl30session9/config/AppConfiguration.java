@@ -1,4 +1,4 @@
-package com.gfg.jbdl30session9;
+package com.gfg.jbdl30session9.config;
 
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;

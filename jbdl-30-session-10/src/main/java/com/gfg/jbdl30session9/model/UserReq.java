@@ -1,4 +1,4 @@
-package com.gfg.jbdl30session9;
+package com.gfg.jbdl30session9.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

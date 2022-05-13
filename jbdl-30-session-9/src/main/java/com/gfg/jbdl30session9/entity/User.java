@@ -1,4 +1,4 @@
-package com.gfg.jbdl30session9;
+package com.gfg.jbdl30session9.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,15 +7,19 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@Entity(name = "item")
+@Entity(name = "my_user")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Item {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(unique = true, nullable = false)
-    private String itemId;
+    private String userName;
+    @Column(unique = true, nullable = false)
+    private String email;
+    private String phone;
+
 }
