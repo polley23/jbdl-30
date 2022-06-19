@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -17,11 +16,11 @@ public class TransactionManagerImpl implements TransactionManager{
     @Autowired
     private TransactionRepository transactionRepository;
     @Override
-    public String create(TransactionRequest transactionRequest) {
+    public String create(TransactionRequest transactionRequest, String username) {
         Transaction transaction = Transaction.builder()
                 .amount(transactionRequest.getAmount())
                 .date(new Date())
-                .fromUser(transactionRequest.getFromUser())
+                .fromUser(username)
                 .toUser(transactionRequest.getToUser())
                 .txType(transactionRequest.getTxType())
                 .txId(UUID.randomUUID().toString())

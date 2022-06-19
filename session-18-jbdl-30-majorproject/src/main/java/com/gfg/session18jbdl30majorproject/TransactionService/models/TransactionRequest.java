@@ -8,7 +8,6 @@ import lombok.*;
 @Setter
 @Builder
 public class TransactionRequest {
-    private String fromUser;
     private String toUser;
     private Float amount;
     private TransactionType txType;

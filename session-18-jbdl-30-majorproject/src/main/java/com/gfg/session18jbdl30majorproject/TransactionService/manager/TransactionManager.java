@@ -6,7 +6,7 @@ import com.gfg.session18jbdl30majorproject.TransactionService.models.Transaction
 
 public interface TransactionManager {
 
-    String create(TransactionRequest transactionRequest);
+    String create(TransactionRequest transactionRequest, String username);
     TransactionResponse get(String transactionId) throws Exception;
     void updateStatus(String transactionId, TransactionStatus transactionStatus) throws Exception;
 }
